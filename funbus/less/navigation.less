@@ -1,0 +1,35 @@
+// main: index.less
+
+// Navigation Styles here
+
+.nav {
+    border-bottom: 2px dashed @navigation-border;
+    width: 100%;
+
+    .nav-container {
+        .flex(row, nowrap, space-between, center);
+        max-width: 800px;
+        padding: 15px 0px;
+        margin: 0 auto;
+
+        @media @mobile {
+            .flex(column, nowrap, space-between, center);
+            padding: 0px;
+          }
+
+        .nav-links {
+            .flex(row, nowrap, space-between, center);
+            a{
+                .nav-link-style();
+                padding: 10px;
+                font-size: 1.2rem;
+            }
+            @media @mobile {
+                width:100%;
+                .flex(row, nowrap, space-evenly, center);
+              }
+        }
+    }
+}
+
+

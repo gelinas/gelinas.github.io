@@ -1,0 +1,92 @@
+// main: index.less
+
+// Mixins in here
+.nav-link-style() {
+    text-decoration: none;
+    color: black;
+}
+
+
+// parametric mixin
+.flex(@flex, @flow, @justify, @align){
+    display: flex;
+    flex-flow: @flex @flow;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+  .font-styles(@size, @family){
+    font-size: @size;
+    font-family: @family;
+  }
+
+.btn-style(@bgcolor:rgb(0, 90, 68), @width:200px, @font-color: white){
+    display: block;
+    background-color: @bgcolor;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    width: @width;
+    height: 45px;
+    border-radius: 10px;
+    color: @font-color;
+    .font-styles(2rem, @body-font);
+
+    &:hover{
+        background-color: @font-color;
+        color: @bgcolor;
+    }
+}
+
+
+// Codepen examples
+// .bordered() {
+//     padding: 20px 0;
+//     border-top: 1px dashed gray;
+//     border-bottom: 1px dashed gray;
+//   }
+  
+  
+  
+//   // parametric mixin
+//   .font-styles(@size, @family){
+//     font-size:@size;
+//     font-family:@family;
+//   }
+  
+//   .custom-btn(@bgcolor:#FFBF27, @width:200px, @font-color:#000){
+//     display: block;
+//     background-color: @bgcolor;
+//     margin: 0 10px 20px;
+//     cursor: pointer;
+//     width: @width;
+//     height: 45px;
+//     border-radius: 10px;
+//     color:@font-color;
+//     .font-styles(2rem, @body-font);
+    
+//     &:hover{
+//       background-color:@font-color;
+//       color:@bgcolor;
+//     }
+    
+//     @media @phone {
+//       .book-flight-btn {
+//         width: 90%;
+//         height: 50px;
+//         font-size: 2.5rem;
+//       }
+//     }
+  
+//     @media( max-width: 400px ) {
+//       .book-flight-btn {
+//         background: green;
+//         color: white;
+//       }
+//     }
+//   }
+  
+//   //Escaping 
+//   @phone: ~'(max-width: 530px)';
+  
