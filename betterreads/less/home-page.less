@@ -1,6 +1,15 @@
 // main: index.less
 
 .home {
+  // Styles unviversal to all pages
+  img {
+    border-radius: 10px;
+    width: 100%;
+    @media @tablet {
+      max-width: 100%;
+    }
+  }
+
   .scroll-img {
     width: 100%;
     height: 200px;
@@ -12,20 +21,44 @@
     bottom: 90px;
   }
 
+  .signup {
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    margin: 0 auto 30px;
+    .flex(column, nowrap, space-between, center);
+
+    @media @tablet {
+      width: 75%;
+    }
+  
+    .btn {
+      .btn-style();
+      margin: 10px auto;
+      width: 100%;
+    }
+  }
+  
   .header-section {
     .flex(column, nowrap, space-between, center);
     text-align: center;
+    border-bottom: 2px dashed @nav-border;
+
     
+    .header-img {
+      max-width: 100%;
+    }
     .header-content {
       width: 100%;
       padding: 5px;
     }
   }
+  // End universal styles
 
+  // index.html styles
   .content-section {
     margin: 30px 0px;
     .flex(column, nowrap, space-between, center);
-
 
     @media @tablet {
       .flex(row, wrap, space-between, center);
@@ -59,8 +92,17 @@
   }
 
   .inverse-content {
-    padding-bottom: 30px;
-    border-bottom: 2px dashed @nav-border;
+    .flex(column, nowrap, space-between, center);
+
+    @media @tablet {
+      .flex(row-reverse, wrap, space-between, center);
+    }
+  }
+  // end index.html styles
+
+  // team.html styles
+  .team-section {
+    margin: 30px 0px;
     .flex(column-reverse, nowrap, space-between, center);
 
     @media @tablet {
@@ -70,6 +112,7 @@
     .text-content {
       width: 100%;
       padding: 5px;
+      text-align: center;
       @media @tablet {
         width: 48%;
         padding: 5px 1%;
@@ -83,42 +126,91 @@
         width: 48%;
         padding: 5px 1%;
       }
-    }
 
     img {
-      border-radius: 10px;
+      border-radius: 50%;
       width: 100%;
       @media @tablet {
         max-width: 100%;
+        }
       }
     }
   }
-  .content-signup {
-    width: 100%;
-    padding: 5px;
-    text-align: center;
-    margin: 0 auto 30px;
-    .flex(column, nowrap, space-between, center);
 
+  .inverse-team {
+    margin: 30px 0px;
+    .flex(column-reverse, nowrap, space-between, center);
 
     @media @tablet {
-      width: 75%;
-    }
-
-    img {
-      border-radius: 10px;
-      width: 100%;
-      @media @tablet {
-        max-width: 100%;
-      }
-    }
-
-    .btn {
-      .btn-style();
-      margin: 10px auto;
-      width: 100%;
+      .flex(row-reverse, wrap, space-between, center);
     }
   }
+
+  .team-small-row {
+    margin: 30px 0px;
+    .flex(row, wrap, space-evenly, center);
+
+    .team-profile {
+      width: 100px;
+      padding: 5px;
+      text-align: center;
+      .flex(column, nowrap, space-between, center);
+
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      h4 {
+        font-size: 1.2rem;
+      }
+      @media @tablet {
+        width: 18%;
+        padding: 5px 1%;
+      }
+
+      img {
+        border-radius: 50%;
+        width: 100%;
+        @media @tablet {
+          max-width: 100%;
+          }
+        }
+    }
+  }
+
+  .team-big-row {
+    margin: 30px 0px;
+    .flex(row, wrap, space-evenly, center);
+
+    .team-profile {
+      width: 150px;
+      padding: 5px;
+      text-align: center;
+      .flex(column, nowrap, space-between, center);
+
+      h2 {
+        font-size: 2.4rem;
+      }
+
+      h4 {
+        font-size: 1.8rem;
+      }
+      @media @tablet {
+        width: 31%;
+        padding: 5px 1%;
+      }
+
+      img {
+        border-radius: 50%;
+        width: 100%;
+        @media @tablet {
+          max-width: 100%;
+          }
+        }
+    }
+  }
+
+  // end team.html styles
 
   /* Unused section
   .content-pick {
