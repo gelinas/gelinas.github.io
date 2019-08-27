@@ -268,7 +268,7 @@ img {
 .home .scroll-img {
   width: 100%;
   height: 200px;
-  background: url(/img/book-stack.jpeg) no-repeat center center fixed;
+  background: url(../img/book-stack.jpeg) no-repeat center center fixed;
 }
 .home .link-anchor {
   position: relative;
