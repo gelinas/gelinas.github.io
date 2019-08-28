@@ -2,8 +2,14 @@
 
 .home {
   // Styles unviversal to all pages
+
+  //.ellipse-gradient(@sea-shell,white;);
+
+  .radial-gradient(@shape: circle; @size: 600px; @colors: @waterloo,white;);
+  //.diagonal-top-gradient(red, #f06d06 50%, rgb(255, 255, 0););
+
   img {
-    border-radius: 10px;
+    .border-radius(10px);
     width: 100%;
     @media @tablet {
       max-width: 100%;
@@ -82,7 +88,7 @@
       }
 
     img {
-      border-radius: 10px;
+      .border-radius(10px);
       width: 100%;
       @media @tablet {
         max-width: 100%;
@@ -128,7 +134,7 @@
       }
 
     img {
-      border-radius: 50%;
+      .border-radius(50%);
       width: 100%;
       @media @tablet {
         max-width: 100%;
@@ -169,7 +175,7 @@
       }
 
       img {
-        border-radius: 50%;
+        .border-radius(25%);
         width: 100%;
         @media @tablet {
           max-width: 100%;
@@ -201,7 +207,7 @@
       }
 
       img {
-        border-radius: 50%;
+        .border-radius(25%);
         width: 100%;
         @media @tablet {
           max-width: 100%;

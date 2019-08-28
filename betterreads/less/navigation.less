@@ -31,6 +31,35 @@
                     .font-styles(1.6rem, @nav-font);
                 padding: 10px 30px;
                 }
+                &:hover {
+                    .animation(bounce 1s infinite);
+                 }
+                .keyframes(bounce; {
+
+                    0% {
+                        transform: translateY(0px)
+                      //animation-timing-function: ease-out;
+                    }
+                  
+                    25% {
+                        transform: translateY(-10px)
+                      //animation-timing-function: ease-in;
+                    }
+                  
+                    50% {
+                        transform: translateY(0px)
+                      //animation-timing-function: ease-out;
+                    }
+                  
+                    75% {
+                        transform: translateY(-7px)
+                      //animation-timing-function: ease-in;
+                    }
+                  
+                    100% {
+                        transform: translateY(0px)
+                    }
+                });
             }
         }
     }
